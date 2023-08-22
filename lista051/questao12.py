@@ -5,24 +5,21 @@ de números deve parar quando o usuário digitar o número -1, e este número -1
 como maior, nem como menor, e nem na contagem da média
 '''
 
-a = int(input("Me informe um número:"))
-b = int(input("Me informe um número:"))
-c = int(input("Me informe um número:"))
-d = int(input("Me informe um número:"))
-while (a and b and c and d != 1):
-    menor = a
-    if (menor > b):
-        b = menor
-    if (menor > c):
-        c = menor
-    if (menor > d):
-        d = menor
-    maior = a
-    if (maior < b):
-        a = maior
-    if (maior < c):
-        a = maior
-    if (maior < d):
-        d = maior
-    media = (a + b + c + d) / 4
-print(f"Esse é o {menor} e esse é o {maior}, e a {media} desses números.")
+a = float(input("Me informe um número:"))
+menor = a
+maior = a
+cont = -1
+soma = 0
+media = soma / cont
+while (a != -1):
+    a = float(input("Me informe um número:"))
+    soma = soma + a
+    cont = cont + 1
+    if (maior < a):
+        maior  = a
+    if (menor > a):
+        menor = a
+    a = float(input("Me informe um número:"))
+    if (maior == -1):
+        print("Você inseriu -1 na primeira resposta.")
+print(f"Esse é o menor desse é {menor} e esse é o maior {maior}, e a média desses números é {media}.")
