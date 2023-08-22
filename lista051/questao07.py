@@ -5,6 +5,10 @@ divisível, mostre-o; não sendo, passe para o próximo passo. A variável que c
 com valor 1
 '''
 
+
 cont = 1
 while (cont < 200):
-    div4 =
+    div4 = cont % 4
+    if (div4 == 0):
+        print(f"Esse {cont} é dívisel por 4.")
+    cont = cont + 1
